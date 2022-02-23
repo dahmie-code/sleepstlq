@@ -12,6 +12,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
     <title>Shop</title>
   </head>
   <body>
@@ -78,17 +80,17 @@
             </div>
           </div>
           <div class="price-unit">
-            <div class="price">
+            <div class="price">                            
                 <h4>Price</h4>
-                <h2>USD 50</h2>
+                <h2 class="result_1">USD 50</h2>
             </div>
             <div class="unit">
                 <h4>Unit</h4>
-                <input type="number" placeholder="2">
+                <input type="number" id="QuantityBox_1" value="2" onchange="calculate(this)" data-unitprice="25" data-productid="1" />
             </div>
           </div>
           <div class="visit-btn">
-            <button type="submit">Buy</button>
+            <button type="button">Buy</button>
           </div>
         </div>
       </section><hr />
@@ -218,5 +220,6 @@
           </div>
         </div>
       </footer>
+<script src="script.js"></script>
   </body>
 </html>

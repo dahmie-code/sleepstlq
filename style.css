@@ -78,8 +78,7 @@ color: #12305B;
     margin-bottom: 40px;
 }
 
-.visit-btn button{
-    cursor: pointer;
+.visit-btn a{
     padding: 8px 40px;
     color: #fff;
     background-color: #FC5959;
@@ -174,38 +173,39 @@ left: 202px;
     background-color: transparent;
     letter-spacing: 1px;
 }
-
+.customer-slider{
+    /* position: relative; */
+    width: 30%;
+    margin: auto;
+    /* display: flex; */
+}
 .customer1{
     padding:30px;
-    width: 30%;
+    /* width: 30%; */
     height: 250px;
     box-shadow: 0px 35px 45px -18px rgba(0, 0, 0, 0.5);
     background-color: #FBF9F2;
     
 }
-
-.dot-container {
-    text-align: center;
-    padding: 20px;
-    background: #ddd;
-}
-
-
 .dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+    /* position: absolute; */
+    
+    cursor: pointer;
+    height: 5px;
+    width: 5px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+.dots{
+    margin: 0 100px;
+    
 }
-
-
-.active, .dot:hover {
-  background-color: #717171;
-}
+  .show, .dot:hover {
+    background-color: #717171;
+  }
 .img-name{
     display: flex;
     justify-content: space-between;
@@ -307,7 +307,7 @@ hr{
     display: flex;
 }
 .emoji span{
-    font-size: 10px;
+    font-size: 14px;
     margin-right: 5px;
 }
 .shop-now{
@@ -497,7 +497,7 @@ margin: auto;
     height: 150px
 }
 
-.media-icons i{
+.media-icons a i{
     margin: 5px;
     color: #12305B;
     background-color: #8fe2ff;
@@ -513,3 +513,20 @@ margin: auto;
     color: #ababab;
 }
 
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }

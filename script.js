@@ -16,12 +16,8 @@ function readMore(){
 }
 
 // Slides show
-/*let slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
 
 function currentSlide(n) {
   showSlides(slideIndex = n);
@@ -37,8 +33,31 @@ function showSlides(n) {
       slides[i].style.display = "none";  
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(" show", "");
   }
   slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}*/
+  dots[slideIndex-1].className += " show";
+}
+
+// Quantity and Amount Calculation
+function calculate2(elm) {
+  var chk = $(elm),                // the checkbox
+      vlu = chk.val(),             // the current qty value
+      pid = chk.data("productid"), // product id
+      unt = chk.data("unitprice"), // unit price
+      res = $(".result_" + pid),   // the result for this product
+      tot = vlu * unt;             // total
+  
+  res.text("USD " + tot);
+}
+
+
+function calculate(elm) {
+  var vlu = elm.value,           // the current qty value
+      pid = elm.getAttribute("data-productid"), // product id
+      unt = elm.getAttribute("data-unitprice"), // unit price
+      res = document.getElementsByClassName("result_" + pid),   // the result for this product
+      tot = vlu * unt;             // total
+  
+  res[0].innerHTML = "USD " + tot;
+}

@@ -155,6 +155,7 @@ color: #12305B;
 .unit input{
     width: 25%;
     padding-left: 8px;
+    outline: none;
 }
 .visit-btn button{
     cursor: pointer;
